@@ -206,6 +206,45 @@ analysis = await o.dispatch("vert", "perplexity_search", {"query": "BTC market a
 | [TradeOracle](https://github.com/Turbo31150/TradeOracle) | Autonomous Crypto Trading Agent |
 | [lumen](https://github.com/Turbo31150/lumen) | Multilingual Live AI Web App |
 
+
+
+## What is Browser MCP Orchestrator?
+
+Automate any web workflow using two browsers simultaneously. While Browser 1 scrapes data, Browser 2 can fill forms — both controlled by MCP (Model Context Protocol) and Chrome DevTools.
+
+Built for JARVIS OS to handle tasks like: scanning Codeur.com for projects, posting on LinkedIn, and managing multiple web sessions in parallel.
+
+## Usage Examples
+
+```python
+# Example 1: Scrape + act in parallel
+browser1.navigate("https://codeur.com/projects")  # Scrape
+browser2.navigate("https://linkedin.com/feed")     # Post
+
+projects = browser1.extract_data()
+browser2.post_comment(generate_comment(projects))
+
+# Example 2: Form automation
+browser1.navigate("https://codeur.com/offers/new")
+browser1.fill("#amount", "750")
+browser1.fill("#message", proposal_text)
+browser1.click("#submit")
+
+# Example 3: Screenshot verification
+browser1.screenshot("/tmp/result.png")
+# → Verify the action was successful
+```
+
+## Use Cases
+
+| Workflow | Description |
+|----------|-------------|
+| **Freelance prospection** | Scan Codeur → filter → auto-apply |
+| **LinkedIn engagement** | Read notifications → draft replies → post |
+| **Price monitoring** | Track prices across multiple sites |
+| **Form filling** | Auto-fill applications, registrations |
+| **Data extraction** | Scrape tables, lists, structured data |
+
 ---
 
 <div align="center">
