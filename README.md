@@ -26,6 +26,20 @@
 
 ---
 
+
+
+## Architecture
+
+```mermaid
+graph LR
+    Orchestrator[MCP Orchestrator] --> B1[Browser 1 CDP]
+    Orchestrator --> B2[Browser 2 CDP]
+    B1 --> Sites[Web Sites]
+    B2 --> Sites
+    Orchestrator --> Router[Color Router]
+    Router --> AI[AI Analysis]
+```
+
 ## Overview
 
 Part of the [JARVIS OS](https://github.com/Turbo31150/jarvis-linux) ecosystem, the **Browser MCP Orchestrator** provides a unified interface to control multiple browser instances through the Chrome DevTools Protocol. Each browser tab becomes a specialized worker, routed by color-coded intent categories.
